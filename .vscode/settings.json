@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        ".qtn": "html",
+        "*.cpp": "cpp",
+        "ostream": "cpp"
+    }
+}

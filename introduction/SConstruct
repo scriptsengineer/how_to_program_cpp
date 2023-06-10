@@ -1,1 +1,1 @@
-Program("Test", "test.cpp")
+Program("Test", "char.cpp")
