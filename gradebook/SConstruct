@@ -1,1 +1,2 @@
-Program("Gradebook", "program.cpp")
+sources = Glob('*.cpp')
+Program("Gradebook", source = sources)

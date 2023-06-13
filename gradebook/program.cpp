@@ -1,27 +1,22 @@
 #include <iostream>
 using std::cout;
-using std::cin;
 using std::endl;
 
 #include <string>
 using std::string;
-using std::getline;
 
-class GradeBook {
-public:
-	void diplay_message(string course_name) {
-		cout << "Welcome to the grade book for\n" << course_name << "!" << endl;
-	}
-};
+#include "gradebook.h"
+#include "analysis.h"
 
 int main() {
-    string name_of_course;
-	GradeBook my_grade_book;
 
-    cout << "Please enter the course name:" << endl;
-    getline(cin, name_of_course);
-    cout << endl;
+	// GradeBook grade_book_1("CS101 C++ Programming");
 
-	my_grade_book.diplay_message(name_of_course);
+	// grade_book_1.diplay_message();
+	// grade_book_1.determine_class_average();
+
+	Analysis application;
+	application.process_exam_results();
+
 	return 0;
 }
