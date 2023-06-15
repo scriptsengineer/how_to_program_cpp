@@ -10,13 +10,15 @@ using std::string;
 
 int main() {
 
-	// GradeBook grade_book_1("CS101 C++ Programming");
+	GradeBook grade_book_1("CS101 C++ Programming");
 
-	// grade_book_1.diplay_message();
+	grade_book_1.diplay_message();
 	// grade_book_1.determine_class_average();
+	grade_book_1.input_grades();
+	grade_book_1.display_grade_report();
 
-	Analysis application;
-	application.process_exam_results();
+	// Analysis application;
+	// application.process_exam_results();
 
 	return 0;
 }

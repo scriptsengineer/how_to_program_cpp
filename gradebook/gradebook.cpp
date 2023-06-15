@@ -11,6 +11,11 @@ using std::setprecision;
 
 GradeBook::GradeBook(string name) {
 	set_course_name(name);
+	a_count = 0;
+	b_count = 0;
+	c_count = 0;
+	d_count = 0;
+	f_count = 0;
 }
 
 void GradeBook::set_course_name(string name) {
@@ -61,4 +66,51 @@ void GradeBook::determine_class_average() {
 	} else {
 		cout << "No grades were entered" << endl;
 	}
+}
+
+void GradeBook::input_grades() {
+	int grade;
+
+	cout << "Enter the letter grades." << endl
+		 << "Enter the EOF character to end input." << endl;
+
+	while ((grade = cin.get()) != EOF) {
+		switch (grade) {
+			case 'A':
+			case 'a':
+				a_count++;
+				break;
+			case 'B':
+			case 'b':
+				b_count++;
+			case 'C':
+			case 'c':
+				c_count++;
+			case 'D':
+			case 'd':
+				d_count++;
+			case 'F':
+			case 'f':
+				f_count++;
+			case '\n':
+			case '\t':
+			case ' ':
+				break;
+			default:
+				cout << "Incorrect letter grade entered." << endl
+					 << "Enter a new grade." << endl;
+				break;
+		}
+	}
+}
+
+void GradeBook::display_grade_report() {
+	cout << "\n\nNumber of students who received each letter grade:"
+	<< "\nA: " << a_count
+	<< "\nB: " << b_count
+	<< "\nC: " << c_count
+	<< "\nD: " << d_count
+	<< "\nF: " << f_count
+	<< endl;
+
 }
