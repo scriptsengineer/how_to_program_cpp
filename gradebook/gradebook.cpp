@@ -101,6 +101,8 @@ void GradeBook::input_grades() {
 					 << "Enter a new grade." << endl;
 				break;
 		}
+
+		student_maximum = maximum(1, 2, 3);
 	}
 }
 
@@ -113,4 +115,16 @@ void GradeBook::display_grade_report() {
 	<< "\nF: " << f_count
 	<< endl;
 
+}
+
+int GradeBook::maximum(int x, int y, int z) {
+	int maximum_value = x;
+
+	if (y > maximum_value) {
+		maximum_value = y;
+	}
+	if (z > maximum_value) {
+		maximum_value = z;
+	}
+	return maximum_value;
 }

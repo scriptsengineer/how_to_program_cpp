@@ -19,5 +19,5 @@ private:
 	int c_count;
 	int d_count;
 	int f_count;
-	int studentMaximum;
+	int student_maximum;
 };
