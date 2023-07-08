@@ -3,21 +3,22 @@ using std::string;
 
 class GradeBook {
 public:
-	GradeBook(string name);
+	const static int students = 10;
+	const static int tests = 3;
+
+	GradeBook(string name, const int[][3]);
+
 	void set_course_name(string name);
 	string get_course_name();
 	void diplay_message();
-	void determine_class_average();
-	void input_grades();
-	void display_grade_report();
-	int maximum(int, int, int);
+	void process_grades();
+	int get_minimum();
+	int get_maximum();
+	double get_average(const int [], const int);
+	void output_bar_chart();
+	void output_grades();
 
 private:
 	string course_name;
-	int a_count;
-	int b_count;
-	int c_count;
-	int d_count;
-	int f_count;
-	int student_maximum;
+	int grades[students][tests];
 };
