@@ -1,0 +1,2 @@
+sources = Glob('fig09_04.cpp')
+Program("Cap09", source = sources)
