@@ -1,0 +1,2 @@
+sources = Glob('*.cpp')
+Program("Bank", source = sources)
